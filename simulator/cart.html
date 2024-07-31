@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .product {
+            width: 30%;
+            border: 1px solid #ccc;
+            padding: 15px;
+            text-align: center;
+        }
+        .product img {
+            width: 100%;
+        }
+        .cart {
+            width: 30%;
+            border: 1px solid #ccc;
+            padding: 15px;
+            text-align: center;
+        }
+        .cart img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+     <div class="product">
+           <img src="clothes1.jpg" alt="Clothes 1">
+            <h3>Clothes 1</h3>
+            <p>$19.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="clothes2.jpg" alt="Clothes 2">
+            <h3>Clothes 2</h3>
+            <p>$29.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="clothes3.jpg" alt="Clothes 3">
+            <h3>Clothes 3</h3>
+            <p>$39.99</p>
+           <button>Add to Cart</button>
+       </div>
+       <div class="product">
+        <img src="clothes3.jpg" alt="Clothes 3">
+        <h3>Clothes 3</h3>
+        <p>$39.99</p>
+       <button>Add to Cart</button>
+   </div>
+   <div class="product">
+    <img src="clothes3.jpg" alt="Clothes 3">
+    <h3>Clothes 3</h3>
+    <p>$39.99</p>
+   <button>Add to Cart</button>
+</div>
+<div class="product">
+    <img src="clothes3.jpg" alt="Clothes 3">
+    <h3>Clothes 3</h3>
+    <p>$39.99</p>
+   <button>Add to Cart</button>
+</div>
+<div class="product">
+    <img src="clothes3.jpg" alt="Clothes 3">
+    <h3>Clothes 3</h3>
+    <p>$39.99</p>
+   <button>Add to Cart</button>
+</div>
+        <div class="cart">
+            <img src="cart.jpg" alt="Cart">
+            <h3>Your Cart</h3>
+            <ul>
+                <!-- Cart items will be displayed here -->
+            </ul>
+            <p>Total: $0.00</p>
+            <button>Checkout</button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.product button').forEach(function(button) {
+            button.addEventListener('click', function() {
+                var cart = document.querySelector('.cart ul');
+                var li = document.createElement('li');
+                li.textContent = this.previousElementSibling.textContent;
+                cart.appendChild(li);
+
+                var total = document.querySelector('.cart p');
+                total.textContent = (parseFloat(total.textContent) + parseFloat(this.previousElementSibling.nextElementSibling.textContent)).toFixed(2);
+            });
+        });
+    </script>
+</body>
+</html>
+    

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body{
+            background-color: rgb(0, 0, 0);
+        }
+        ul.oi {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: whitesmoke;
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    width: 98%;
+    border-radius: 6px;
+    border-width: 100px;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: rgb(203, 200, 200);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: rgb(107, 150, 121);
+}
+
+li a.active {
+    color: rgb(252, 248, 248);
+    background-color: #201e1e;
+}
+.U{
+float: left;
+color: whitesmoke;
+}
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop: IMAGO DEI</title>
+</head>
+<body>
+    <ul class="oi">
+        <li><a href="IMAGO DEI.html">HOME</a></li>
+        <li><a class="active" href="SHOP.html">SHOP</a></li>
+        <li><a href="ABOUT US.html">ABOUT US</a></li>
+        <li><a href="contact us.html">CONTACT US</a></li>
+   <h2 class="U">IMAGO DEI
+    <img src="https://i.ibb.co/0XHQ0JS/IMAGO-DEI.jpg" alt="pic.gif" width="20px" height="20px">
+   </h2>
+</ul><br>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: aquamarine;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .product {
+            width: 30%;
+            border: 1px solid #ccc;
+            padding: 15px;
+            text-align: center;
+        }
+        .product img {
+            width: 100%;
+        }
+        .cart {
+            width: 30%;
+            border: 1px solid #62b080;
+            padding: 15px;
+            text-align: center;
+        }
+        .cart img {
+            width: 100%;
+        }
+        p{
+            color: aquamarine;
+        }
+        h3{
+            color: aquamarine;
+        }
+        ul{
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+     <div class="product">
+           <img src="https://i.ibb.co/DrXLXhm/f7aaad4754971b81a3c2479319e8291b.jpg" alt="Clothes 1">
+            <h3>Clothes 1</h3>
+            <p>$19.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://i.ibb.co/DrXLXhm/f7aaad4754971b81a3c2479319e8291b.jpg" alt="Clothes 2">
+            <h3>Clothes 2</h3>
+            <p>$29.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://i.ibb.co/DrXLXhm/f7aaad4754971b81a3c2479319e8291b.jpg" alt="Clothes 3">
+            <h3>Clothes 3</h3>
+            <p style="color: aquamarine;">$39.99</p>
+           <button>Add to Cart</button>
+       </div>
+       <div class="product">
+        <img src="https://i.ibb.co/DrXLXhm/f7aaad4754971b81a3c2479319e8291b.jpg" alt="Clothes 2">
+        <h3>Clothes 4</h3>
+        <p>$29.99</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://i.ibb.co/DrXLXhm/f7aaad4754971b81a3c2479319e8291b.jpg" alt="Clothes 3">
+        <h3>Clothes 5</h3>
+        <p>$39.99</p>
+       <button>Add to Cart</button>
+       </div>
+       <div class="product">
+        <img src="https://i.ibb.co/DrXLXhm/f7aaad4754971b81a3c2479319e8291b.jpg" alt="Clothes 2">
+        <h3>Clothes 6</h3>
+        <p>$29.99</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://i.ibb.co/DrXLXhm/f7aaad4754971b81a3c2479319e8291b.jpg" alt="Clothes 3">
+        <h3>clothes 7</h3>
+        <p>$39.99</p>
+       <button>Add to Cart</button>
+       </div>
+       <div class="product">
+        <img src="https://i.ibb.co/DrXLXhm/f7aaad4754971b81a3c2479319e8291b.jpg" alt="Clothes 2">
+        <h3>Clothes 7</h3>
+        <p>$29.99</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://i.ibb.co/DrXLXhm/f7aaad4754971b81a3c2479319e8291b.jpg" alt="Clothes 3">
+        <h3>Clothes 8</h3>
+        <p>$39.99</p>
+       <button>Add to Cart</button>
+       </div><br><br><br>
+       <div class="cart">
+            <h3>Your Cart</h3>
+            <ul>
+
+            </ul>
+            <p> total $</p>
+            <button >Checkout</button>
+        </div>
+    </div>
+            
+
+    <script>
+        document.querySelectorAll('.product button').forEach(function(button) {
+            button.addEventListener('click', function() {
+                var cart = document.querySelector('.cart ul');
+                var li = document.createElement('li');
+                li.textContent = this.previousElementSibling.textContent;
+                cart.appendChild(li);
+
+                var total = document.querySelector('.cart p');
+                total.textContent = (parseFloat(total.textContent) + parseFloat(this.previousElementSibling.nextElementSibling.textContent)).toFixed(2);
+            });
+        });
+    </script>
+</body>
+</html>
+            
